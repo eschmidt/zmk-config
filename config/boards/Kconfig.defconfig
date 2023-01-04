@@ -1,5 +1,9 @@
 if ZMK_BACKLIGHT
 
+config ZMK_BACKLIGHT
+    select PWM
+    select LED_PWM
+
 config PWM
     default y
 

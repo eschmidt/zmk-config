@@ -35,11 +35,7 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp RALT>, <&emoji>;
             };
-        };
-
-        chosen {
-            zmk,backlight = &backlight;
-        };
+        }
 
         keymap {
                 compatible = "zmk,keymap";
