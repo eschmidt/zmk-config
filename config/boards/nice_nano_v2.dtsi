@@ -1,5 +1,3 @@
-/dts-v1/;
-
 / {
     backlight: pwmleds {
         compatible = "pwm-leds";
