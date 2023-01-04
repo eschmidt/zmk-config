@@ -1,10 +1,6 @@
 /dts-v1/;
 
 / {
-    chosen {
-        zmk,backlight = &backlight;
-    };
-
     backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";

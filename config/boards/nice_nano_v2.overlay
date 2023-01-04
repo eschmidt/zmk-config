@@ -4,11 +4,7 @@
     /* ch0-inverted; */
 };
 
-/ {
-    chosen {
-        zmk,backlight = &backlight;
-    };
-
+/
     backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";
