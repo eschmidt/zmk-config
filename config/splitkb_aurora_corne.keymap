@@ -36,10 +36,6 @@
             };
         };
 
-        chosen {
-            zmk,backlight = &backlight;
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
