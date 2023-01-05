@@ -14,7 +14,7 @@ menuconfig BONGO_CAT
     select LVGL_USE_IMG
     select LVGL_USE_ANIMATION
 
-if BONGO_CAT
+if CONFIG_BONGO_CAT
 
 config BONGO_CAT_IDLE_LIMIT
     int "Upper limit for WPM for showing idle animation"
@@ -24,7 +24,7 @@ config BONGO_CAT_SLOW_LIMIT
     int "Upper limit for WPM for showing slow typing image"
     default 60
 
-endif # BONGO_CAT
+endif # CONFIG_BONGO_CAT
 
 
 endif
