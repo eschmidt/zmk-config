@@ -11,6 +11,8 @@
 #include <dt-bindings/zmk/backlight.h>
 #include "boards/nice_nano_v2.dtsi"
 
+&led_strip { chain-length = <27>; };
+
 / {
         macros {
             emoji: emoji {
