@@ -70,15 +70,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  1  |  2  |  3  |  4  |  5     |   |    6     |  7  |  8  |  9  |  0  |     |
-// |     |     |     |     |     |        |   |    =     |  4  |  5  |  6  |  *  |  +  |
-// |     |     |     |     |     |        |   |          |  1  |  2  |  3  |  /  |  -  |
-//                   |     |     | BL_TOG |   | BL_CYCLE |     |  0  |
+// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
+// |     |     |     |     |     |     |   |  =  |  4  |  5  |  6  |  *  |  +  |
+// |     |     |     |     |     |     |   |     |  1  |  2  |  3  |  /  |  -  |
+//                   |     |     |     |   |     |     |  0  |
                         bindings = <
-   &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6        &kp N7  &kp N8  &kp N9 &kp N0    &trans
-   &trans  &trans  &trans  &trans  &trans  &trans      &kp EQUAL     &kp N4  &kp N5  &kp N6 &kp STAR  &kp PLUS
-   &trans  &trans  &trans  &trans  &trans  &trans      &trans        &kp N1  &kp N2  &kp N3 &kp FSLH  &kp MINUS
-                    	   &trans  &trans  &bl BL_TOG  &bl BL_CYCLE  &trans  &kp N0
+   &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6     &kp N7  &kp N8  &kp N9 &kp N0    &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &kp EQUAL  &kp N4  &kp N5  &kp N6 &kp STAR  &kp PLUS
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans     &kp N1  &kp N2  &kp N3 &kp FSLH  &kp MINUS
+                    	   &trans  &trans  &trans    &trans     &trans  &kp N0
                         >;
                 };
         };
