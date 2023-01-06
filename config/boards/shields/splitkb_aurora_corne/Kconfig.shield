@@ -6,6 +6,8 @@ config SHIELD_SPLITKB_AURORA_CORNE_LEFT
 config SHIELD_SPLITKB_AURORA_CORNE_RIGHT
 	def_bool $(shields_list_contains,splitkb_aurora_corne_right)
 
+if ZMK_DISPLAY
+
 menu "Bongo Cat Widget"
 
 config BONGO_CAT
@@ -27,3 +29,5 @@ config BONGO_CAT_SLOW_LIMIT
 endif # BONGO_CAT
 
 endmenu
+
+endif # ZMK_DISPLAY
