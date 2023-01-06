@@ -1,12 +1,6 @@
 # SPDX-License-Identifier: MIT
 
-config BOARD_ENABLE_DCDC
-	bool "Enable DCDC mode"
-	select SOC_DCDC_NRF52X
-	default y
-	depends on (BOARD_NICE_NANO || BOARD_NICE_NANO_V2)
-
-if ZMK_DISPLAY
+menu "Bongo Cat Widget"
 
 config BONGO_CAT
     bool "Show WPM bongo cat"
@@ -26,4 +20,4 @@ config BONGO_CAT_SLOW_LIMIT
 
 endif # BONGO_CAT
 
-endif # ZMK_DISPLAY
+endmenu
