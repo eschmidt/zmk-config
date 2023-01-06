@@ -5,7 +5,7 @@ config SHIELD_SPLITKB_AURORA_CORNE_LEFT
 
 config SHIELD_SPLITKB_AURORA_CORNE_RIGHT
 	def_bool $(shields_list_contains,splitkb_aurora_corne_right)
-	
+
 menu "Bongo Cat Widget"
 
 config BONGO_CAT
