@@ -1,14 +1,14 @@
 # Find Zephyr. This also loads Zephyr's build system.
-#find_package(Zephyr REQUIRED HINTS ../zephyr)
-#project(zmk)
-#
-#zephyr_linker_sources(RODATA include/linker/zmk-events.ld)
-#
+find_package(Zephyr REQUIRED HINTS ../zephyr)
+project(zmk)
+
+zephyr_linker_sources(RODATA include/linker/zmk-events.ld)
+
 # Add your source file to the "app" target. This must come after
 # find_package(Zephyr) which defines the target.
-#target_include_directories(app PRIVATE include)
-#target_sources_ifdef(CONFIG_ZMK_WPM app PRIVATE src/wpm.c)
-#target_sources_ifdef(CONFIG_ZMK_WPM app PRIVATE src/events/wpm_state_changed.c)
+target_include_directories(app PRIVATE include)
+target_sources_ifdef(CONFIG_ZMK_WPM app PRIVATE src/wpm.c)
+target_sources_ifdef(CONFIG_ZMK_WPM app PRIVATE src/events/wpm_state_changed.c)
 
 zephyr_library()
 zephyr_library_include_directories(${ZEPHYR_LVGL_MODULE_DIR})
