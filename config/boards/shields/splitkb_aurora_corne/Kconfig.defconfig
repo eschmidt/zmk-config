@@ -46,8 +46,8 @@ config LVGL_HOR_RES_MAX
 config LVGL_VER_RES_MAX
 	default 168
 
-config LS0XX
-	default y
+#config LS0XX
+#	default y
 
 config LVGL_BITS_PER_PIXEL
 	default 1
