@@ -27,6 +27,10 @@ config ZMK_DISPLAY
 if ZMK_DISPLAY
 
 config BONGO_CAT
+    bool "Show WPM bongo cat"
+    select ZMK_WPM
+    select LVGL_USE_IMG
+    select LVGL_USE_ANIMATION
     default y
 
 config SYSTEM_WORKQUEUE_STACK_SIZE
