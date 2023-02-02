@@ -2,9 +2,7 @@
 
 if ZMK_DISPLAY
 
-menu "Bongo Cat Widget"
-
-menuconfig BONGO_CAT
+config BONGO_CAT
     bool "Show WPM bongo cat"
     select ZMK_WPM
     select LVGL_USE_IMG
