@@ -26,6 +26,9 @@ config ZMK_DISPLAY
 
 if ZMK_DISPLAY
 
+config BONGO_CAT
+    default y
+
 config SYSTEM_WORKQUEUE_STACK_SIZE
     default 2048
 
