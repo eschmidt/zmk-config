@@ -9,6 +9,13 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
+config BONGO_CAT
+    bool "Show WPM bongo cat"
+    select ZMK_WPM
+    select LVGL_USE_IMG
+    select LVGL_USE_ANIMATION
+    default y
+
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
 
 if SHIELD_SPLITKB_AURORA_CORNE_LEFT || SHIELD_SPLITKB_AURORA_CORNE_RIGHT
@@ -25,13 +32,6 @@ config ZMK_DISPLAY
 	select LVGL_FONT_MONTSERRAT_26
 
 if ZMK_DISPLAY
-
-config BONGO_CAT
-    bool "Show WPM bongo cat"
-    select ZMK_WPM
-    select LVGL_USE_IMG
-    select LVGL_USE_ANIMATION
-    default y
 
 config SYSTEM_WORKQUEUE_STACK_SIZE
     default 2048
@@ -52,9 +52,6 @@ config LVGL_HOR_RES_MAX
 
 config LVGL_VER_RES_MAX
 	default 168
-
-#config LS0XX
-#	default y
 
 config LVGL_BITS_PER_PIXEL
 	default 1
