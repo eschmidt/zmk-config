@@ -52,6 +52,7 @@ if SHIELD_SPLITKB_AURORA_CORNE_RIGHT
 config DEF_RIGHT
     bool "use default display widgets on the right"
     select ZMK_WIDGET_BATTERY_STATUS
+    select ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     default y
 
 endif # SHIELD_SPLITKB_AURORA_CORNE_RIGHT
