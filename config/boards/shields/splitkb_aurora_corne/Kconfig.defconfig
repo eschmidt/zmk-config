@@ -9,6 +9,11 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
+config BONGO_WPM
+    bool "hacky cat"
+    select ZMK_WPM
+    default y
+
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
 
 if SHIELD_SPLITKB_AURORA_CORNE_LEFT || SHIELD_SPLITKB_AURORA_CORNE_RIGHT
@@ -28,7 +33,6 @@ if ZMK_DISPLAY
 
 config BONGO_CAT
     bool "Show WPM bongo cat"
-#    select ZMK_WPM
     select LVGL_USE_IMG
     select LVGL_USE_ANIMATION
     default y
