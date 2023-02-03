@@ -14,7 +14,6 @@ config BONGO_CAT
     select ZMK_WPM
     select LVGL_USE_IMG
     select LVGL_USE_ANIMATION
-    select ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     default y
 
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
