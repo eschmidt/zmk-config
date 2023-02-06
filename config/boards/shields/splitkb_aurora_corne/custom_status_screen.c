@@ -34,16 +34,12 @@ lv_obj_t *zmk_display_status_screen() {
     lv_cont_set_fit(center_frame, LV_FIT_TIGHT);
     lv_cont_set_layout(center_frame, LV_LAYOUT_CENTER);
 
-#if IS_ENABLED(CONFIG_ZMK_WIDGET_LAYER_STATUS)
     zmk_widget_layer_status_init(&layer_status_widget, screen);
     lv_obj_align(zmk_widget_layer_status_obj(&layer_status_widget), NULL, LV_ALIGN_IN_BOTTOM_LEFT,
                  0, 0);
-#endif
 
-#if IS_ENABLED(CONFIG_HELLO)
     zmk_widget_hello_init(&hello_widget, screen)
     lv_obj_align(zmk_widget_hello_obj(&hello_widget), NULL, LV_ALIGN_IN_TOP_LEFT, 0, 0)
-#endif
 
     return screen;
 }
