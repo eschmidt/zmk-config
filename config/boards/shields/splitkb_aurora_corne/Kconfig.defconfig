@@ -16,6 +16,12 @@ if ZMK_DISPLAY
 
 #endchoice
 
+config HELLO
+    bool "Hello world widget test"
+    select ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select LVGL_OBJ_LABEL
+    default y
+
 config SYSTEM_WORKQUEUE_STACK_SIZE
     default 2048
 
@@ -59,15 +65,15 @@ endif # ZMK_DISPLAY
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
 
 
-if SHIELD_SPLITKB_AURORA_CORNE_RIGHT
+#if SHIELD_SPLITKB_AURORA_CORNE_RIGHT
 
-config DEF_RIGHT
-    bool "use default display widgets on the right"
-    select ZMK_WIDGET_BATTERY_STATUS
-    select ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
-    default y
+#config DEF_RIGHT
+#    bool "use default display widgets on the right"
+#    select ZMK_WIDGET_BATTERY_STATUS
+#    select ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+#    default y
 
-endif # SHIELD_SPLITKB_AURORA_CORNE_RIGHT
+#endif # SHIELD_SPLITKB_AURORA_CORNE_RIGHT
 
 
 if SHIELD_SPLITKB_AURORA_CORNE_LEFT || SHIELD_SPLITKB_AURORA_CORNE_RIGHT
@@ -84,11 +90,6 @@ config ZMK_DISPLAY
 	select LVGL_FONT_MONTSERRAT_26
 
 if ZMK_DISPLAY
-
-config HELLO
-    bool "Hello world widget test"
-    select LVGL_OBJ_LABEL
-    default y
 
 config SSD1306
 	default y
