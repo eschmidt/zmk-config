@@ -87,6 +87,7 @@ if ZMK_DISPLAY
 
 config HELLO
     bool "Hello world widget test"
+    select LVGL_OBJ_LABEL
     default y
 
 config SSD1306
