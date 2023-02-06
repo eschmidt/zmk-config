@@ -11,14 +11,13 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 if ZMK_DISPLAY
 
-#choice ZMK_DISPLAY_STATUS_SCREEN
-#	default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+choice ZMK_DISPLAY_STATUS_SCREEN
+	default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
 
-#endchoice
+endchoice
 
 config HELLO
     bool "Hello world widget test"
-    select ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     select LVGL_OBJ_LABEL
     default y
 
