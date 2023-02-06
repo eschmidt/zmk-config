@@ -54,6 +54,10 @@ config BONGO_CAT_SLOW_LIMIT
 
 endif # BONGO_CAT
 
+config HELLO
+    bool "Hello world widget test"
+    default y
+
 endif # ZMK_DISPLAY
 
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT

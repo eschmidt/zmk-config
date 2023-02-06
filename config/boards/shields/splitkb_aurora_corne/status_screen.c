@@ -84,5 +84,12 @@ lv_obj_t *zmk_display_status_screen() {
     lv_obj_align(zmk_widget_wpm_status_obj(&wpm_status_widget), NULL, LV_ALIGN_IN_BOTTOM_RIGHT, -12,
                  0);
 #endif
+
+#if IS_ENABLED(CONFIG_HELLO)
+    hello_label = lv_label_create(screen, NULL);
+    lv_label_set_text(hello_label, "HI");
+    lv_obj_align(hello_label, NULL, LV_ALIGN_IN_BOTTOM_RIGHT, -12, 0)
+#endif
+
     return screen;
 }
