@@ -85,9 +85,9 @@ config ZMK_DISPLAY
 
 if ZMK_DISPLAY
 
-#config HELLO
-#    bool "Hello world widget test"
-#    default y
+config HELLO
+    bool "Hello world widget test"
+    default y
 
 config SSD1306
 	default y
