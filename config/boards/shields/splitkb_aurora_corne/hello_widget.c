@@ -19,10 +19,22 @@ struct zmk_widget_hello {
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
-static void output_status_update_cb(struct peripheral_status_state state) {
-    struct zmk_widget_peripheral_status *widget;
-    SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_status_symbol(widget->obj, state); }
+struct hello_state {
+    bool connected;
+};
+
+static struct hello_state get_state(const zmk_event_t *_eh) {
+    return (struct hello_state){.connected = zmk_split_bt_peripheral_is_connected()};
 }
+
+static void output_status_update_cb(struct hello_state state) {
+    struct zmk_widget_hello *widget;
+    SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { lv_label_set_text(widget->obj, "HI"); }
+}
+
+ZMK_DISPLAY_WIDGET_LISTENER(widget_hello, struct hello_state,
+                            hello_update_cb, get_state)
+ZMK_SUBSCRIPTION(widget_hello, zmk_split_peripheral_status_changed);
 
 int zmk_widget_hello_init(struct zmk_widget_hello *widget,
                                       lv_obj_t *parent) {
