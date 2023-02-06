@@ -30,6 +30,9 @@ static struct zmk_widget_layer_status layer_status_widget;
 #if IS_ENABLED(CONFIG_ZMK_WIDGET_WPM_STATUS)
 static struct zmk_widget_wpm_status wpm_status_widget;
 #endif
+#if IS_ENABLED(CONFIG_HELLO)
+static struct zmk_widget_hello hello_widget;
+#endif
 lv_style_t global_style;
 
 lv_obj_t *zmk_display_status_screen() {
@@ -86,9 +89,8 @@ lv_obj_t *zmk_display_status_screen() {
 #endif
 
 #if IS_ENABLED(CONFIG_HELLO)
-    hello_label = lv_label_create(screen, NULL);
-    lv_label_set_text(hello_label, "HI");
-    lv_obj_align(hello_label, NULL, LV_ALIGN_IN_BOTTOM_RIGHT, -12, 0)
+    zmk_widget_hello_init(&hello_widget, screen)
+    lv_obj_align(zmk_widget_hello_obj(&hello_widget), NULL, LV_ALIGN_IN_BOTTOM_RIGHT, -12, 0)
 #endif
 
     return screen;
