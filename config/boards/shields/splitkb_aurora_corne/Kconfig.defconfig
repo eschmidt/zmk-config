@@ -54,10 +54,6 @@ config LVGL_VER_RES_MAX
 
 #endif # BONGO_CAT
 
-config HELLO
-    bool "Hello world widget test"
-    default y
-
 endif # ZMK_DISPLAY
 
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
@@ -88,6 +84,10 @@ config ZMK_DISPLAY
 	select LVGL_FONT_MONTSERRAT_26
 
 if ZMK_DISPLAY
+
+config HELLO
+    bool "Hello world widget test"
+    default y
 
 config SSD1306
 	default y
