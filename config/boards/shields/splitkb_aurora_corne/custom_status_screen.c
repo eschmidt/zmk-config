@@ -8,18 +8,26 @@
 #include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#if IS_ENABLED(CONFIG_ZMK_WIDGET_LAYER_STATUS)
-static struct zmk_widget_layer_status layer_status_widget;
-#endif
-#if IS_ENABLED(CONFIG_HELLO)
-static struct zmk_widget_hello hello_widget;
-#endif
-lv_style_t global_style;
+struct bongo_cat_widget {
+    sys_snode_t node;
+    lv_obj_t *obj;
+};
+
+static struct bongo_cat_widget widget;
+
+LV_IMG_DECLARE(slow_img);
 
 lv_obj_t *zmk_display_status_screen() {
     lv_obj_t *screen;
     lv_obj_t *center_frame;
 
+    widget->obj = lv_img_create(parent, NULL);
+    lv_img_set_auto_size(widget->obj, true);
+    sys_slist_append(&widgets, &widget->node);
+
+    lv_img_set_src(widget->obj, &slow_img);
+
+/*
     lv_style_init(&global_style);
     lv_style_set_text_font(&global_style, LV_STATE_DEFAULT, &lv_font_montserrat_26);
     lv_style_set_text_letter_space(&global_style, LV_STATE_DEFAULT, 1);
@@ -40,6 +48,7 @@ lv_obj_t *zmk_display_status_screen() {
 
     zmk_widget_hello_init(&hello_widget, screen)
     lv_obj_align(zmk_widget_hello_obj(&hello_widget), NULL, LV_ALIGN_IN_TOP_LEFT, 0, 0)
+ */
 
     return screen;
 }
