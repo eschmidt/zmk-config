@@ -1,5 +1,0 @@
-# SPDX-License-Identifier: MIT
-
-config HELLO
-    bool "hello world widget demo"
-    default y
