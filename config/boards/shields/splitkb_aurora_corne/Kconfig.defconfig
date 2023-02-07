@@ -14,6 +14,7 @@ if ZMK_DISPLAY
 
 config HELLO
     bool "hello world widget demo"
+    
     default y
 
 choice ZMK_DISPLAY_STATUS_SCREEN
