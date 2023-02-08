@@ -1,0 +1,31 @@
+file_format: "1"
+id: bingo
+name: bingo
+type: board
+arch: arm
+requires: [nice!nano_V2]
+outputs:
+  - usb
+  - ble
+url: https://nicekeyboards.com/nice-nano
+exposes: [pro_micro]
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - adc
+  - usb_device
+  - ble
+  - ieee802154
+  - pwm
+  - watchdog
+features:
+  - keys
+  - display
+  - underglow
+  - rgb
+  - 5-way switch
+siblings:
+  - bingo_left
+  - bingo_right
