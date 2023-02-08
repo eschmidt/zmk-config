@@ -19,6 +19,7 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 lv_obj_t *zmk_display_status_screen() {
 
     lv_obj_t *screen;
+    /*
     lv_obj_t *center_frame;
 
     lv_style_init(&global_style);
@@ -33,6 +34,7 @@ lv_obj_t *zmk_display_status_screen() {
     lv_obj_align(center_frame, NULL, LV_ALIGN_CENTER, 0, 0);
     lv_cont_set_fit(center_frame, LV_FIT_TIGHT);
     lv_cont_set_layout(center_frame, LV_LAYOUT_CENTER);
+    */
 
     bongo_cat_widget->obj = lv_label_create(screen, NULL);
     lv_obj_set_size(bongo_cat_widget->obj, 40, 15);
