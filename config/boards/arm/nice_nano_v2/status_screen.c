@@ -6,6 +6,7 @@
  */
 
 #include "status_screen.h"
+#include "widgets/bongo_cat_widget.h"
 
 #include <logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
