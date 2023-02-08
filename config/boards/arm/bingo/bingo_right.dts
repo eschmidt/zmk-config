@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "bingo.dtsi"
+#include "corne.dtsi"
 
 / {
 	chosen {
@@ -33,6 +33,10 @@
 			, <&pro_micro 4 GPIO_ACTIVE_HIGH>
 			;
 	};
+};
+
+&right_encoder {
+	status = "okay";
 };
 
 &default_transform {

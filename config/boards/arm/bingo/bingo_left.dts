@@ -1,12 +1,10 @@
-#include "bingo.dts"
-
 /*
  * Copyright (c) 2022 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
 
-#include "bingo.dtsi"
+#include "corne.dtsi"
 
 / {
 	chosen {
@@ -37,4 +35,6 @@
 	};
 };
 
-
+&left_encoder {
+	status = "okay";
+};
