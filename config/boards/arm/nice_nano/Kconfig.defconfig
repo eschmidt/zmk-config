@@ -56,8 +56,6 @@ config LVGL_VER_RES_MAX
 config SPI
 	default y
 
-#config LS0XX
-#	default y
 
 config LVGL_BITS_PER_PIXEL
 	default 1
