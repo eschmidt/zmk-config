@@ -9,6 +9,14 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
+if ZMK_DISPLAY
+
+config BONGO_CAT
+    bool "WPM animation"
+    default y
+    
+endif # ZMK_DISPLAY
+
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
 
 if SHIELD_SPLITKB_AURORA_CORNE_LEFT || SHIELD_SPLITKB_AURORA_CORNE_RIGHT
@@ -24,10 +32,6 @@ config ZMK_DISPLAY
 
 if ZMK_DISPLAY
 
-config BONGO_CAT
-    bool "WPM animation"
-    default y
-    
 config SSD1306
 	default y
 
