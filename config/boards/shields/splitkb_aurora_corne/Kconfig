@@ -1,4 +1,0 @@
-
-config BONGO_CAT
-    bool "WPM animation"
-    default y
