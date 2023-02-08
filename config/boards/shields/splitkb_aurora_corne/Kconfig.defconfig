@@ -14,7 +14,7 @@ if ZMK_DISPLAY
 config BONGO_CAT
     bool "WPM animation"
     default y
-    
+
 endif # ZMK_DISPLAY
 
 endif # SHIELD_SPLITKB_AURORA_CORNE_LEFT
