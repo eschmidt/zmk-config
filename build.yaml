@@ -15,9 +15,9 @@
 include:
   - board: bingo_left
   - board: bingo_right
-  - board: nice_nano_v2
+  - board: bingo_left
     shield: corne_left
-  - board: nice_nano_v2
+  - board: bingo_right
     shield: corne_right
 #  - board: nice_nano
 #    shield: settings_reset
