@@ -68,7 +68,7 @@ lv_obj_t *zmk_display_status_screen() {
     lv_cont_set_layout(center_frame, LV_LAYOUT_CENTER);
 
 #if IS_ENABLED(CONFIG_BONGO_CAT)
-    zmk_widget_bongo_cat_init(&bongo_widget, center_frame);
+    bongo_cat_widget_init(&bongo_widget, center_frame);
 //    lv_obj_align(zmk_widget_bongo_cat_obj(&bongo_cat_widget), NULL, LV_ALIGN_IN_TOP_MID, 0, 2);
 #endif
 
